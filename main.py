@@ -14,7 +14,9 @@ sport_words_list = sport_keywords_dataset.split()
 shopping_words_list = shopping_keywords_dataset.split()
 news_words_list = news_keywords_dataset.split()
 
-stop_words = list(stopwords.words('english'))
+print("Input language of the web page")
+language = str(input())
+stop_words = list(stopwords.words(language))
 
 utils.remove_stop_words(stop_words, science_words_list)
 utils.remove_stop_words(stop_words, sport_words_list)
@@ -22,8 +24,9 @@ utils.remove_stop_words(stop_words, shopping_words_list)
 utils.remove_stop_words(stop_words, news_words_list)
 
 print("Enter a link to the web page")
-# url = str(input())
-url = 'https://edition.cnn.com/2023/04/11/sport/helen-maroulis-concussion-wrestling-spt-intl/index.html'
+url = str(input())
+# An example of web page
+# url = 'https://edition.cnn.com/2023/04/11/sport/helen-maroulis-concussion-wrestling-spt-intl/index.html'
 text = utils.get_page_text(url)
 text = text.lower()
 text_as_vector = utils.text_to_vector(text)
