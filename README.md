@@ -4,7 +4,6 @@ how can we calculate which topic this web page is closest to?
 The answer is to calculate the distance metric of this web page. In this repository you will see an example of calculating the Jacquard metric and the Cosine metric for a web page 
 
 Getting started
-* Open `main.py` and configure language of the web page
 * Run `main.py`
-* Enter link to the web page
+* Enter the language of web page and its link
 * Watch the results
